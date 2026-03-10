@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title_blog">Inspiración | SATW - Spain Around The World</title>
+    <meta name="description" content="Artículos exclusivos y secretos de viaje sobre los rincones más lujosos de España." data-i18n="desc_blog" />
+    <link rel="canonical" href="https://satw.travel/blog.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header class="scrolled">
+      <nav>
+        <div class="logo">
+          <a href="index.html" class="logo-link" aria-label="Volver al inicio">
+            <img src="images/favicon.svg" alt="SATW Logo" class="logo-image" />
+            <div class="logo-text">
+              <span class="logo-main">SATW</span>
+              <span class="logo-sub">Spain Around The World</span>
+            </div>
+          </a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" />
+        <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+          <span class="hamburger"></span>
+        </label>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+          <li><a href="experiencias.html" data-i18n="nav_exp">Experiencias</a></li>
+          <li><a href="blog.html" class="active" data-i18n="nav_blog">Inspiración</a></li>
+          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li>
+            <div class="lang-selector">
+              <span class="current-lang">ES <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="lang-dropdown">
+                <li><a href="#" data-lang="es">Español</a></li>
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="fr">Français</a></li>
+                <li><a href="#" data-lang="nl">Nederlands</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="index.html#contacto" class="nav-cta" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-sub blog-bg">
+        <div class="hero-content">
+          <h1 data-i18n="blog_hero_h1">Cuaderno de Viaje</h1>
+          <p data-i18n="blog_hero_p">Crónicas de lujo, secretos locales y la esencia de España.</p>
+        </div>
+      </section>
+
+      <section class="blog-grid-section">
+        <div class="section-header reveal">
+          <h2 data-i18n="blog_title">Inspiración de Autor</h2>
+          <p class="section-subtitle" data-i18n="blog_subtitle">Historias para aquellos que buscan el alma detrás de cada destino.</p>
+        </div>
+
+        <div class="blog-masonry-grid">
+          <article class="blog-post-card reveal large">
+            <div class="blog-post-visual">
+              <img src="images/paisaje madrid.png" alt="Madrid Lujo" />
+              <span class="blog-post-tag" data-i18n="blog_tag_1">Editorial</span>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-meta">
+                <span class="post-date">20 Feb, 2026</span>
+                <span class="read-time" data-i18n="blog_read_1">8 min read</span>
+              </div>
+              <h3 data-i18n="blog_post_1_h">El Madrid de los Austrias: Un Recorrido Privado entre Palacios</h3>
+              <p data-i18n="blog_post_1_p">Descubra los rincones más aristocráticos de la capital española lejos de las multitudes, con acceso exclusivo a colecciones de arte privadas y jardines ocultos.</p>
+              <a href="#" class="blog-post-link" data-i18n="blog_link_1">Sumergirse en la Historia <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-post-card reveal">
+            <div class="blog-post-visual">
+              <img src="images/paisaje islas canarias.png" alt="Canarias" />
+              <span class="blog-post-tag" data-i18n="blog_tag_2">Astro-turismo</span>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-meta">
+                <span class="post-date">15 Feb, 2026</span>
+                <span class="read-time" data-i18n="blog_read_2">5 min read</span>
+              </div>
+              <h3 data-i18n="blog_post_2_h">Noches bajo las estrellas en el Teide</h3>
+              <p data-i18n="blog_post_2_p">Una experiencia de astroturismo exclusiva con cena de alta cocina a 2.000 metros de altura sobre el nivel del mar.</p>
+              <a href="#" class="blog-post-link" data-i18n="blog_link_2">Ver Más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-post-card reveal">
+            <div class="blog-post-visual">
+              <img src="images/paisaje san sebastian.png" alt="San Sebastian" />
+              <span class="blog-post-tag" data-i18n="blog_tag_3">Gastro</span>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-meta">
+                <span class="post-date">10 Feb, 2026</span>
+                <span class="read-time" data-i18n="blog_read_3">6 min read</span>
+              </div>
+              <h3 data-i18n="blog_post_3_h">San Sebastián: La Meca de las Estrellas Michelin</h3>
+              <p data-i18n="blog_post_3_p">Un viaje sensorial por la ciudad con más densidad de estrellas Michelin del mundo.</p>
+              <a href="#" class="blog-post-link" data-i18n="blog_link_3">Explorar <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/favicon.svg" alt="" class="logo-image" aria-hidden="true" />
+          <h3 data-i18n="footer_h3">SATW - Spain Around The World</h3>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright" data-i18n="footer_copy">© 2026 SATW. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

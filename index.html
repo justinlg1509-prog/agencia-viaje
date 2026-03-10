@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      SATW - Viajes a España personalizados | Spain Around The World
+    </title>
+    <meta
+      name="description"
+      content="SATW diseña viajes personalizados por España: itinerarios exclusivos, guías locales y atención 24/7. Descubre Barcelona, Madrid, Andalucía y las islas con expertos locales."
+    />
+    <link rel="canonical" href="https://satw.travel/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1e3a8a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SATW - Viajes a España personalizados" />
+    <meta
+      property="og:description"
+      content="Diseñamos viajes a medida por España con guías locales, mejores precios y soporte 24/7."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://satw.travel/" />
+    <meta
+      property="og:image"
+      content="https://satw.travel/images/favicon.svg"
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SATW - Viajes a España personalizados"
+    />
+    <meta
+      name="twitter:description"
+      content="Viajes a medida por España: itinerarios únicos, guías locales y atención 24/7."
+    />
+    <meta
+      name="twitter:image"
+      content="https://satw.travel/images/favicon.svg"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "SATW - Spain Around The World",
+        "image": "https://satw.travel/images/favicon.svg",
+        "@id": "https://satw.travel/",
+        "url": "https://satw.travel/",
+        "telephone": "+34000000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Falsa 123",
+          "addressLocality": "Madrid",
+          "postalCode": "28001",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.416775,
+          "longitude": -3.70379
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="splash-content">
+        <img src="images/favicon.svg" alt="SATW Logo" class="splash-logo" />
+        <div class="splash-loader"></div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Floating Contact Button -->
+    <a
+      href="https://wa.me/34000000000"
+      class="floating-whatsapp"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html" class="logo-link" aria-label="Volver al inicio">
+            <img src="images/favicon.svg" alt="España Alrededor del Mundo Logo" class="logo-image" />
+            <div class="logo-text">
+              <span class="logo-main">SATW</span>
+              <span class="logo-sub">Spain Around The World</span>
+            </div>
+          </a>
+        </div>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle-input"
+          aria-hidden="true"
+        />
+        <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+          <span class="hamburger"></span>
+        </label>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+          <li><a href="experiencias.html" data-i18n="nav_exp">Experiencias</a></li>
+          <li><a href="blog.html" data-i18n="nav_blog">Inspiración</a></li>
+          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li>
+            <div class="lang-selector">
+              <span class="current-lang">ES <i class="fa-solid fa-chevron-down"></i></span>
+              <ul class="lang-dropdown">
+                <li><a href="#" data-lang="es">Español</a></li>
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="fr">Français</a></li>
+                <li><a href="#" data-lang="nl">Nederlands</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="index.html#contacto" class="nav-cta" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <section class="hero">
+        <img
+          src="images/paisaje españa.png"
+          alt="Imagen de España"
+          class="hero-image"
+        />
+        <div class="hero-content">
+          <h1 data-i18n="hero_h1">Descubre España y Compártela con el Mundo</h1>
+          <p data-i18n="hero_p">
+            SATW te conecta con los rincones más auténticos de España y los
+            lleva a cada esquina del planeta
+          </p>
+          <a href="#contacto" class="cta-button" data-i18n="cta_plan">Planifica tu Aventura</a>
+        </div>
+      </section>
+
+      <!-- Destinos -->
+      <section id="destinos">
+        <h2 class="reveal" data-i18n="dest_title">Destinos Destacados</h2>
+        <div class="destinations-grid">
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img src="images/paisaje barcelona.png" alt="Barcelona" />
+            </div>
+            <div class="destination-info">
+              <h3>Barcelona</h3>
+              <p data-i18n="dest_bcn_p">
+                Arquitectura modernista, playas mediterráneas y una vida
+                nocturna vibrante te esperan en la Ciudad Condal.
+              </p>
+            </div>
+          </div>
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img src="images/paisaje madrid.png" alt="Madrid" />
+            </div>
+            <div class="destination-info">
+              <h3>Madrid</h3>
+              <p data-i18n="dest_mad_p">
+                La capital ofrece arte de clase mundial, gastronomía excepcional
+                y una energía incomparable.
+              </p>
+            </div>
+          </div>
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img src="images/paisaje sevilla.png" alt="Sevilla" />
+            </div>
+            <div class="destination-info">
+              <h3>Sevilla</h3>
+              <p data-i18n="dest_sev_p">
+                Sumérgete en el flamenco, la arquitectura mudéjar y la esencia
+                del sur español.
+              </p>
+            </div>
+          </div>
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img
+                src="images/paisaje islas baleares.png"
+                alt="Islas Baleares"
+              />
+            </div>
+            <div class="destination-info">
+              <h3>Islas Baleares</h3>
+              <p data-i18n="dest_bal_p">
+                Paraísos mediterráneos con calas cristalinas, cultura única y
+                ambiente cosmopolita.
+              </p>
+            </div>
+          </div>
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img
+                src="images/paisaje islas canarias.png"
+                alt="Islas Canarias"
+              />
+            </div>
+            <div class="destination-info">
+              <h3>Islas Canarias</h3>
+              <p data-i18n="dest_can_p">
+                Paisajes volcánicos, playas de ensueño y clima primaveral
+                durante todo el año.
+              </p>
+            </div>
+          </div>
+          <div class="destination-card reveal">
+            <div class="destination-image">
+              <img src="images/paisaje san sebastian.png" alt="San Sebastián" />
+            </div>
+            <div class="destination-info">
+              <h3>San Sebastián</h3>
+              <p data-i18n="dest_ss_p">
+                Capital gastronómica con playas urbanas espectaculares y cultura
+                vasca auténtica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="services">
+        <div class="section-header reveal">
+          <h2 data-i18n="serv_title">Nuestros Servicios</h2>
+          <p class="section-subtitle" data-i18n="serv_subtitle">
+            Exclusividad, confort y experiencias diseñadas exclusivamente para
+            ti en cada rincón de España.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <h3 data-i18n="serv_custom_h">Viajes a Medida</h3>
+            <p data-i18n="serv_custom_p">
+              Creamos itinerarios artesanales que reflejan tus sueños, desde
+              retiros boutique hasta aventuras gastronómicas privadas.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 data-i18n="serv_local_h">Embajadores Locales</h3>
+            <p data-i18n="serv_local_p">
+              Más que guías, tendrás anfitriones expertos que te abrirán las
+              puertas a los secretos mejor guardados de nuestra cultura.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 data-i18n="serv_exec_h">Garantía de Excelencia</h3>
+            <p data-i18n="serv_exec_p">
+              Acceso a tarifas preferenciales y beneficios exclusivos en los
+              mejores hoteles y establecimientos de la península.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 data-i18n="serv_supp_h">Asistencia Ejecutiva 24/7</h3>
+            <p data-i18n="serv_supp_p">
+              Tu tranquilidad es nuestra prioridad. Nuestro equipo de soporte
+              premium te acompaña en cada paso de tu viaje.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section id="testimonios">
+        <h2 class="reveal" data-i18n="test_title">Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonials-container">
+          <div class="testimonial reveal">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text" data-i18n="test_1_text">
+              Una experiencia inolvidable en Barcelona. El itinerario fue
+              perfecto y pudimos conocer lugares que jamás habríamos descubierto
+              por nuestra cuenta.
+            </p>
+            <p class="testimonial-author" data-i18n="test_1_author">- María González</p>
+          </div>
+          <div class="testimonial reveal">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text" data-i18n="test_2_text">
+              El equipo de Viajes Horizonte hizo que nuestras vacaciones en las
+              Canarias fueran mágicas. Atención impecable y detalles que
+              marcaron la diferencia.
+            </p>
+            <p class="testimonial-author" data-i18n="test_2_author">- Carlos Ramírez</p>
+          </div>
+          <div class="testimonial reveal">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text" data-i18n="test_3_text">
+              Profesionales, atentos y conocedores. Nos ayudaron a planificar
+              una ruta por Andalucía que superó todas nuestras expectativas.
+            </p>
+            <p class="testimonial-author" data-i18n="test_3_author">- Laura Martín</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FAQ Section -->
+      <section id="faq" class="faq-section reveal">
+        <div class="section-header">
+          <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
+          <p class="section-subtitle" data-i18n="faq_subtitle">Resolvemos tus dudas para que solo te preocupes de disfrutar de tu viaje.</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-i18n="faq_q1">
+              ¿Qué incluyen los viajes a medida?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a1">Nuestros viajes incluyen itinerarios 100% personalizados, selección de hoteles boutique, transporte privado, guías locales exclusivos y asistencia 24/7 durante toda tu estancia.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-i18n="faq_q2">
+              ¿Con cuánta antelación debo reservar?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a2">Recomendamos un mínimo de 2 a 3 meses para garantizar la disponibilidad en los destinos más exclusivos, aunque podemos gestionar peticiones de última hora según disponibilidad.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-i18n="faq_q3">
+              ¿Ofrecéis servicios para grupos o empresas?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a3">Sí, diseñamos experiencias MICE, viajes de incentivo y retiros corporativos, así como viajes para grandes grupos familiares con logística dedicada.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section id="newsletter" class="newsletter-section reveal">
+        <div class="newsletter-content">
+          <h2 data-i18n="news_h2">Suscríbete a nuestra Newsletter</h2>
+          <p data-i18n="news_p">
+            Recibe itinerarios exclusivos y secretos de viaje directamente en tu
+            bandeja de entrada.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              required
+              aria-label="Correo electrónico para newsletter"
+              data-i18n="news_placeholder"
+            />
+            <button type="submit" class="cta-button" data-i18n="news_btn">Suscribirme</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Formulario de Contacto -->
+      <section id="contacto">
+        <h2 class="reveal" data-i18n="contact_h2">Planifica Tu Próxima Aventura</h2>
+        <form class="contact-form reveal">
+          <div class="form-group">
+            <label for="nombre" data-i18n="form_name">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required data-i18n="form_name_placeholder" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Email</label>
+            <input type="email" id="email" name="email" required data-i18n="form_email_placeholder" />
+          </div>
+          <div class="form-group">
+            <label for="destino" data-i18n="form_destination">Destino de Interés</label>
+            <select id="destino" name="destino">
+              <option value="" data-i18n="form_opt_default">Selecciona un destino</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="madrid">Madrid</option>
+              <option value="sevilla">Sevilla</option>
+              <option value="baleares">Islas Baleares</option>
+              <option value="canarias">Islas Canarias</option>
+              <option value="san-sebastian">San Sebastián</option>
+              <option value="otro" data-i18n="form_opt_other">Otro destino</option>
+            </select>
+          </div>
+          <div class="form-group small-inputs-grid">
+            <div>
+              <label for="adultos" data-i18n="form_adults">Adultos</label>
+              <input
+                type="number"
+                id="adultos"
+                name="adultos"
+                min="0"
+                value="2"
+              />
+            </div>
+            <div>
+              <label for="ninos" data-i18n="form_children">Niños</label>
+              <input type="number" id="ninos" name="ninos" min="0" value="0" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="total-personas" data-i18n="form_total">Total de Personas</label>
+            <input
+              type="number"
+              id="total-personas"
+              name="total-personas"
+              readonly
+              value="2"
+            />
+          </div>
+          <div class="form-group date-grid">
+            <div>
+              <label for="fecha-inicio" data-i18n="form_start">Fecha de inicio</label>
+              <input type="date" id="fecha-inicio" name="fecha-inicio" />
+            </div>
+            <div>
+              <label for="fecha-fin" data-i18n="form_end">Fecha de fin</label>
+              <input type="date" id="fecha-fin" name="fecha-fin" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-i18n="form_message">Cuéntanos sobre tu viaje ideal</label>
+            <textarea id="mensaje" name="mensaje" rows="4" data-i18n="form_message_placeholder"></textarea>
+          </div>
+          <button type="submit" class="submit-button" data-i18n="form_btn">
+            Solicitar Información
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/favicon.svg" alt="" class="logo-image" aria-hidden="true" />
+          <h3 data-i18n="footer_h3">SATW - Spain Around The World</h3>
+        </div>
+        <p data-i18n="footer_tagline">Llevando la esencia de España a cada rincón del mundo</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-contact">
+          <p><i class="fa-solid fa-envelope"></i> fake@satw.travel</p>
+          <p><i class="fa-solid fa-phone"></i> +34 000 00 00 00</p>
+        </div>
+        <p class="copyright" data-i18n="footer_copy">
+          © 2026 SATW - Spain Around The World. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    <!-- El JS se ha movido a script.js -->
+  </body>
+</html>

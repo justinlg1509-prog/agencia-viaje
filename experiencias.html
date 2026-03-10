@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title_exp">
+      Experiencias Exclusivas | SATW - Spain Around The World
+    </title>
+    <meta
+      name="description"
+      content="Descubre nuestra colección de experiencias exclusivas en España: catas privadas, vuelos en globo, yates de lujo y más."
+      data-i18n="desc_exp"
+    />
+    <link rel="canonical" href="https://satw.travel/experiencias.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header class="scrolled">
+      <nav>
+        <div class="logo">
+          <a href="index.html" class="logo-link" aria-label="Volver al inicio">
+            <img src="images/favicon.svg" alt="SATW Logo" class="logo-image" />
+            <div class="logo-text">
+              <span class="logo-main">SATW</span>
+              <span class="logo-sub">Spain Around The World</span>
+            </div>
+          </a>
+        </div>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle-input"
+          aria-hidden="true"
+        />
+        <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+          <span class="hamburger"></span>
+        </label>
+        <ul id="primary-navigation" class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+          <li>
+            <a href="experiencias.html" class="active" data-i18n="nav_exp"
+              >Experiencias</a
+            >
+          </li>
+          <li><a href="blog.html" data-i18n="nav_blog">Inspiración</a></li>
+          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li>
+            <div class="lang-selector">
+              <span class="current-lang"
+                >ES <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="lang-dropdown">
+                <li><a href="#" data-lang="es">Español</a></li>
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="fr">Français</a></li>
+                <li><a href="#" data-lang="nl">Nederlands</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="index.html#contacto"
+              class="nav-cta"
+              data-i18n="nav_contact"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-sub">
+        <div class="hero-content">
+          <h1 data-i18n="exp_hero_h1">Experiencias Curadas</h1>
+          <p data-i18n="exp_hero_p">
+            Momentos diseñados para ser eternos, en los escenarios más bellos de
+            España.
+          </p>
+        </div>
+      </section>
+
+      <section class="experiences-gallery">
+        <div class="section-header reveal">
+          <h2 data-i18n="exp_title">Colección Privada</h2>
+          <p class="section-subtitle" data-i18n="exp_subtitle">
+            Una selección artesanal de vivencias que desafían lo ordinario.
+          </p>
+        </div>
+
+        <div class="experiences-container">
+          <article class="experience-item reveal">
+            <div class="experience-visual">
+              <img src="images/paisaje barcelona.png" alt="Catas Privadas" />
+              <div class="experience-overlay"></div>
+              <span class="experience-label" data-i18n="label_gastronomy"
+                >Gastronomía</span
+              >
+            </div>
+            <div class="experience-text">
+              <span class="experience-location" data-i18n="exp_card_1_loc"
+                >El Penedés, Cataluña</span
+              >
+              <h3 data-i18n="exp_card_1_h">Catas Privadas de Cava & Terroir</h3>
+              <p data-i18n="exp_card_1_p">
+                Acceso exclusivo a bodegas históricas con sumilleres de
+                prestigio y maridaje de autor entre viñedos milenarios.
+              </p>
+              <a
+                href="index.html#contacto"
+                class="experience-cta"
+                data-i18n="exp_cta_1"
+                >Consultar Disponibilidad
+                <i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="experience-item reveal inverted">
+            <div class="experience-visual">
+              <img
+                src="images/paisaje islas baleares.png"
+                alt="Charter Yates"
+              />
+              <div class="experience-overlay"></div>
+              <span class="experience-label" data-i18n="label_lifestyle"
+                >Lifestyle</span
+              >
+            </div>
+            <div class="experience-text">
+              <span class="experience-location" data-i18n="exp_card_2_loc"
+                >Ibiza & Formentera</span
+              >
+              <h3 data-i18n="exp_card_2_h">
+                Charter de Yates: El Mediterráneo Secreto
+              </h3>
+              <p data-i18n="exp_card_2_p">
+                Navegue por calas inaccesibles a bordo de embarcaciones de lujo,
+                con servicio de chef privado y equipo de buceo profesional.
+              </p>
+              <a
+                href="index.html#contacto"
+                class="experience-cta"
+                data-i18n="exp_cta_2"
+                >Reservar Experiencia <i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-visual">
+              <img src="images/paisaje sevilla.png" alt="Flamenco" />
+              <div class="experience-overlay"></div>
+              <span class="experience-label" data-i18n="label_culture"
+                >Cultura</span
+              >
+            </div>
+            <div class="experience-text">
+              <span class="experience-location" data-i18n="exp_card_3_loc"
+                >Sevilla, Andalucía</span
+              >
+              <h3 data-i18n="exp_card_3_h">
+                Flamenco en Palacios de la Nobleza
+              </h3>
+              <p data-i18n="exp_card_3_p">
+                Una velada privada de arte puro en el corazón de un palacio
+                sevillano del siglo XVIII, lejos del circuito comercial.
+              </p>
+              <a
+                href="index.html#contacto"
+                class="experience-cta"
+                data-i18n="exp_cta_3"
+                >Saber Más <i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="images/favicon.svg"
+            alt=""
+            class="logo-image"
+            aria-hidden="true"
+          />
+          <h3 data-i18n="footer_h3">SATW - Spain Around The World</h3>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright" data-i18n="footer_copy">
+          © 2026 SATW. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
