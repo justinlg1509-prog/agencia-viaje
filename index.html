@@ -80,11 +80,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
-  <body>
+  <body class="loading">
     <!-- Splash Screen -->
     <div id="splash-screen">
       <div class="splash-content">
@@ -104,6 +108,7 @@
       href="https://wa.me/34000000000"
       class="floating-whatsapp"
       target="_blank"
+      rel="noopener"
       aria-label="Contactar por WhatsApp"
     >
       <i class="fa-brands fa-whatsapp"></i>
@@ -114,7 +119,11 @@
       <nav>
         <div class="logo">
           <a href="index.html" class="logo-link" aria-label="Volver al inicio">
-            <img src="images/favicon.svg" alt="España Alrededor del Mundo Logo" class="logo-image" />
+            <img
+              src="images/favicon.svg"
+              alt="España Alrededor del Mundo Logo"
+              class="logo-image"
+            />
             <div class="logo-text">
               <span class="logo-main">SATW</span>
               <span class="logo-sub">Spain Around The World</span>
@@ -132,12 +141,16 @@
         </label>
         <ul id="primary-navigation" class="nav-links">
           <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
-          <li><a href="experiencias.html" data-i18n="nav_exp">Experiencias</a></li>
+          <li>
+            <a href="experiencias.html" data-i18n="nav_exp">Experiencias</a>
+          </li>
           <li><a href="blog.html" data-i18n="nav_blog">Inspiración</a></li>
           <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
           <li>
             <div class="lang-selector">
-              <span class="current-lang">ES <i class="fa-solid fa-chevron-down"></i></span>
+              <span class="current-lang"
+                >ES <i class="fa-solid fa-chevron-down"></i
+              ></span>
               <ul class="lang-dropdown">
                 <li><a href="#" data-lang="es">Español</a></li>
                 <li><a href="#" data-lang="en">English</a></li>
@@ -146,7 +159,14 @@
               </ul>
             </div>
           </li>
-          <li><a href="index.html#contacto" class="nav-cta" data-i18n="nav_contact">Contacto</a></li>
+          <li>
+            <a
+              href="index.html#contacto"
+              class="nav-cta"
+              data-i18n="nav_contact"
+              >Contacto</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -165,7 +185,9 @@
             SATW te conecta con los rincones más auténticos de España y los
             lleva a cada esquina del planeta
           </p>
-          <a href="#contacto" class="cta-button" data-i18n="cta_plan">Planifica tu Aventura</a>
+          <a href="#contacto" class="cta-button" data-i18n="cta_plan"
+            >Planifica tu Aventura</a
+          >
         </div>
       </section>
 
@@ -309,7 +331,9 @@
 
       <!-- Testimonios -->
       <section id="testimonios">
-        <h2 class="reveal" data-i18n="test_title">Lo Que Dicen Nuestros Clientes</h2>
+        <h2 class="reveal" data-i18n="test_title">
+          Lo Que Dicen Nuestros Clientes
+        </h2>
         <div class="testimonials-container">
           <div class="testimonial reveal">
             <div class="testimonial-quote">"</div>
@@ -318,7 +342,9 @@
               perfecto y pudimos conocer lugares que jamás habríamos descubierto
               por nuestra cuenta.
             </p>
-            <p class="testimonial-author" data-i18n="test_1_author">- María González</p>
+            <p class="testimonial-author" data-i18n="test_1_author">
+              - María González
+            </p>
           </div>
           <div class="testimonial reveal">
             <div class="testimonial-quote">"</div>
@@ -327,7 +353,9 @@
               Canarias fueran mágicas. Atención impecable y detalles que
               marcaron la diferencia.
             </p>
-            <p class="testimonial-author" data-i18n="test_2_author">- Carlos Ramírez</p>
+            <p class="testimonial-author" data-i18n="test_2_author">
+              - Carlos Ramírez
+            </p>
           </div>
           <div class="testimonial reveal">
             <div class="testimonial-quote">"</div>
@@ -335,44 +363,72 @@
               Profesionales, atentos y conocedores. Nos ayudaron a planificar
               una ruta por Andalucía que superó todas nuestras expectativas.
             </p>
-            <p class="testimonial-author" data-i18n="test_3_author">- Laura Martín</p>
+            <p class="testimonial-author" data-i18n="test_3_author">
+              - Laura Martín
+            </p>
           </div>
         </div>
       </section>
-
 
       <!-- FAQ Section -->
       <section id="faq" class="faq-section reveal">
         <div class="section-header">
           <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
-          <p class="section-subtitle" data-i18n="faq_subtitle">Resolvemos tus dudas para que solo te preocupes de disfrutar de tu viaje.</p>
+          <p class="section-subtitle" data-i18n="faq_subtitle">
+            Resolvemos tus dudas para que solo te preocupes de disfrutar de tu
+            viaje.
+          </p>
         </div>
         <div class="faq-container">
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" data-i18n="faq_q1">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              data-i18n="faq_q1"
+            >
               ¿Qué incluyen los viajes a medida?
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="faq-answer">
-              <p data-i18n="faq_a1">Nuestros viajes incluyen itinerarios 100% personalizados, selección de hoteles boutique, transporte privado, guías locales exclusivos y asistencia 24/7 durante toda tu estancia.</p>
+              <p data-i18n="faq_a1">
+                Nuestros viajes incluyen itinerarios 100% personalizados,
+                selección de hoteles boutique, transporte privado, guías locales
+                exclusivos y asistencia 24/7 durante toda tu estancia.
+              </p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" data-i18n="faq_q2">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              data-i18n="faq_q2"
+            >
               ¿Con cuánta antelación debo reservar?
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="faq-answer">
-              <p data-i18n="faq_a2">Recomendamos un mínimo de 2 a 3 meses para garantizar la disponibilidad en los destinos más exclusivos, aunque podemos gestionar peticiones de última hora según disponibilidad.</p>
+              <p data-i18n="faq_a2">
+                Recomendamos un mínimo de 2 a 3 meses para garantizar la
+                disponibilidad en los destinos más exclusivos, aunque podemos
+                gestionar peticiones de última hora según disponibilidad.
+              </p>
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" data-i18n="faq_q3">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              data-i18n="faq_q3"
+            >
               ¿Ofrecéis servicios para grupos o empresas?
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="faq-answer">
-              <p data-i18n="faq_a3">Sí, diseñamos experiencias MICE, viajes de incentivo y retiros corporativos, así como viajes para grandes grupos familiares con logística dedicada.</p>
+              <p data-i18n="faq_a3">
+                Sí, diseñamos experiencias MICE, viajes de incentivo y retiros
+                corporativos, así como viajes para grandes grupos familiares con
+                logística dedicada.
+              </p>
             </div>
           </div>
         </div>
@@ -394,34 +450,56 @@
               aria-label="Correo electrónico para newsletter"
               data-i18n="news_placeholder"
             />
-            <button type="submit" class="cta-button" data-i18n="news_btn">Suscribirme</button>
+            <button type="submit" class="cta-button" data-i18n="news_btn">
+              Suscribirme
+            </button>
           </form>
         </div>
       </section>
 
       <!-- Formulario de Contacto -->
       <section id="contacto">
-        <h2 class="reveal" data-i18n="contact_h2">Planifica Tu Próxima Aventura</h2>
+        <h2 class="reveal" data-i18n="contact_h2">
+          Planifica Tu Próxima Aventura
+        </h2>
         <form class="contact-form reveal">
           <div class="form-group">
             <label for="nombre" data-i18n="form_name">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required data-i18n="form_name_placeholder" />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              data-i18n="form_name_placeholder"
+            />
           </div>
           <div class="form-group">
             <label for="email" data-i18n="form_email">Email</label>
-            <input type="email" id="email" name="email" required data-i18n="form_email_placeholder" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              data-i18n="form_email_placeholder"
+            />
           </div>
           <div class="form-group">
-            <label for="destino" data-i18n="form_destination">Destino de Interés</label>
+            <label for="destino" data-i18n="form_destination"
+              >Destino de Interés</label
+            >
             <select id="destino" name="destino">
-              <option value="" data-i18n="form_opt_default">Selecciona un destino</option>
+              <option value="" data-i18n="form_opt_default">
+                Selecciona un destino
+              </option>
               <option value="barcelona">Barcelona</option>
               <option value="madrid">Madrid</option>
               <option value="sevilla">Sevilla</option>
               <option value="baleares">Islas Baleares</option>
               <option value="canarias">Islas Canarias</option>
               <option value="san-sebastian">San Sebastián</option>
-              <option value="otro" data-i18n="form_opt_other">Otro destino</option>
+              <option value="otro" data-i18n="form_opt_other">
+                Otro destino
+              </option>
             </select>
           </div>
           <div class="form-group small-inputs-grid">
@@ -441,7 +519,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="total-personas" data-i18n="form_total">Total de Personas</label>
+            <label for="total-personas" data-i18n="form_total"
+              >Total de Personas</label
+            >
             <input
               type="number"
               id="total-personas"
@@ -452,7 +532,9 @@
           </div>
           <div class="form-group date-grid">
             <div>
-              <label for="fecha-inicio" data-i18n="form_start">Fecha de inicio</label>
+              <label for="fecha-inicio" data-i18n="form_start"
+                >Fecha de inicio</label
+              >
               <input type="date" id="fecha-inicio" name="fecha-inicio" />
             </div>
             <div>
@@ -461,8 +543,15 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="mensaje" data-i18n="form_message">Cuéntanos sobre tu viaje ideal</label>
-            <textarea id="mensaje" name="mensaje" rows="4" data-i18n="form_message_placeholder"></textarea>
+            <label for="mensaje" data-i18n="form_message"
+              >Cuéntanos sobre tu viaje ideal</label
+            >
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              data-i18n="form_message_placeholder"
+            ></textarea>
           </div>
           <button type="submit" class="submit-button" data-i18n="form_btn">
             Solicitar Información
@@ -475,13 +564,22 @@
     <footer>
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="images/favicon.svg" alt="" class="logo-image" aria-hidden="true" />
+          <img
+            src="images/favicon.svg"
+            alt=""
+            class="logo-image"
+            aria-hidden="true"
+          />
           <h3 data-i18n="footer_h3">SATW - Spain Around The World</h3>
         </div>
-        <p data-i18n="footer_tagline">Llevando la esencia de España a cada rincón del mundo</p>
+        <p data-i18n="footer_tagline">
+          Llevando la esencia de España a cada rincón del mundo
+        </p>
         <div class="social-links">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
