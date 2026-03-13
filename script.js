@@ -285,6 +285,15 @@ document.addEventListener("DOMContentLoaded", () => {
       desc_blog:
         "Artículos exclusivos y secretos de viaje sobre los rincones más lujosos de España.",
       footer_h3: "SATW - Spain Around The World",
+      legal_notice: "Aviso Legal",
+      privacy_policy: "Política de Privacidad",
+      cookies_policy: "Política de Cookies",
+      terms_conditions: "Condiciones de Contratación",
+      cookie_banner_text: "Utilizamos cookies propias y de terceros para mejorar su experiencia.",
+      cookie_accept: "Aceptar",
+      cookie_reject: "Rechazar",
+      cookie_more_info: "Más información",
+      form_privacy_consent: "Acepto la política de privacidad",
     },
     en: {
       nav_home: "Home",
@@ -424,6 +433,15 @@ document.addEventListener("DOMContentLoaded", () => {
       desc_blog:
         "Exclusive articles and travel secrets about the most luxurious corners of Spain.",
       footer_h3: "SATW - Spain Around The World",
+      legal_notice: "Legal Notice",
+      privacy_policy: "Privacy Policy",
+      cookies_policy: "Cookies Policy",
+      terms_conditions: "Terms & Conditions",
+      cookie_banner_text: "We use our own and third-party cookies to improve your experience.",
+      cookie_accept: "Accept",
+      cookie_reject: "Reject",
+      cookie_more_info: "More information",
+      form_privacy_consent: "I accept the privacy policy",
     },
     fr: {
       nav_home: "Accueil",
@@ -565,6 +583,15 @@ document.addEventListener("DOMContentLoaded", () => {
       desc_blog:
         "Articles exclusifs et secrets de voyage sur les coins les plus luxueux de l'Espagne.",
       footer_h3: "SATW - Spain Around The World",
+      legal_notice: "Mentions Légales",
+      privacy_policy: "Politique de Confidentialité",
+      cookies_policy: "Politique de Cookies",
+      terms_conditions: "Conditions de Contratación",
+      cookie_banner_text: "Nous utilisons nos propres cookies et ceux de tiers para mejorar su experiencia.",
+      cookie_accept: "Accepter",
+      cookie_reject: "Refuser",
+      cookie_more_info: "Plus d'informations",
+      form_privacy_consent: "J'accepte la politique de confidentialité",
     },
     nl: {
       nav_home: "Home",
@@ -705,6 +732,15 @@ document.addEventListener("DOMContentLoaded", () => {
       desc_blog:
         "Exclusieve artikelen en reiszijde over de meest luxueuze hoekjes van Spanje.",
       footer_h3: "SATW - Spain Around The World",
+      legal_notice: "Juridische Kennisgeving",
+      privacy_policy: "Privacybeleid",
+      cookies_policy: "Cookiebeleid",
+      terms_conditions: "Algemene Voorwaarden",
+      cookie_banner_text: "Wij gebruiken eigen cookies en cookies van derden om uw ervaring te verbeteren.",
+      cookie_accept: "Accepteren",
+      cookie_reject: "Weigeren",
+      cookie_more_info: "Meer informatie",
+      form_privacy_consent: "Ik accepteer het privacybeleid",
     },
   };
 
