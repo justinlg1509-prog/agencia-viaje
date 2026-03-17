@@ -3,604 +3,384 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      SATW - Viajes a España personalizados | Spain Around The World
-    </title>
+    <title>La Taberna del Retiro | Gastronomía Tradicional en Madrid</title>
     <meta
       name="description"
-      content="SATW diseña viajes personalizados por España: itinerarios exclusivos, guías locales y atención 24/7. Descubre Barcelona, Madrid, Andalucía y las islas con expertos locales."
+      content="Disfruta de la mejor gastronomía madrileña frente al Parque del Retiro. Cocido madrileño tradicional, ambiente premium y producto de mercado."
     />
-    <link rel="canonical" href="https://satw.travel/" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#1e3a8a" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="SATW - Viajes a España personalizados" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="La Taberna del Retiro - El Sabor de Madrid"
+    />
     <meta
       property="og:description"
-      content="Diseñamos viajes a medida por España con guías locales, mejores precios y soporte 24/7."
+      content="Recetas heredadas frente al emblemático Parque del Retiro. ¡Haz tu reserva online!"
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://satw.travel/" />
     <meta
       property="og:image"
-      content="https://satw.travel/images/favicon.svg"
-    />
-    <meta property="og:locale" content="es_ES" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="SATW - Viajes a España personalizados"
-    />
-    <meta
-      name="twitter:description"
-      content="Viajes a medida por España: itinerarios únicos, guías locales y atención 24/7."
-    />
-    <meta
-      name="twitter:image"
-      content="https://satw.travel/images/favicon.svg"
+      content="images/restaurante por dentro.webp"
     />
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TravelAgency",
-        "name": "SATW - Spain Around The World",
-        "image": "https://satw.travel/images/favicon.svg",
-        "@id": "https://satw.travel/",
-        "url": "https://satw.travel/",
-        "telephone": "+34000000000",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Calle Falsa 123",
-          "addressLocality": "Madrid",
-          "postalCode": "28001",
-          "addressCountry": "ES"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 40.416775,
-          "longitude": -3.70379
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      }
-    </script>
+    <!-- Google Fonts -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
-  <body class="loading">
-    <!-- Splash Screen -->
-    <div id="splash-screen">
-      <div class="splash-content">
-        <img src="images/favicon.svg" alt="SATW Logo" class="splash-logo" />
-        <div class="splash-loader"></div>
+  <body>
+    <a href="https://wa.me/34912345678" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <nav>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-utensils" style="color: var(--primary-color)"></i>
+          <span>LA TABERNA DEL RETIRO</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+          <li>
+            <a href="index.html#historia" data-i18n="nav_history">Historia</a>
+          </li>
+          <li><a href="carta.html" data-i18n="nav_menu">Carta</a></li>
+          <li><a href="reservas.html" data-i18n="nav_contact">Contacto</a></li>
+          <li>
+            <a href="reservas.html" class="btn-primary" data-i18n="nav_reserve"
+              >Reservar Mesa</a
+            >
+          </li>
+
+          <li>
+            <button id="lang-toggle" class="lang-switch">
+              <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+            </button>
+          </li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <header
+      class="hero"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(&quot;images/restaurante por dentro.webp&quot;);
+      "
+    >
+      <div class="hero-content">
+        <h4 data-i18n="hero_subtitle">Tradición Madrileña</h4>
+        <h1 data-i18n="hero_title">
+          El sabor de Madrid en el <span>corazón</span> del Retiro
+        </h1>
+        <p data-i18n="hero_description">
+          Platos con alma, recetas heredadas y el mejor ambiente frente al
+          parque más emblemático de la capital.
+        </p>
+        <div class="hero-btns">
+          <a href="carta.html" class="btn-primary"
+            ><i class="fas fa-book-open"></i>
+            <span data-i18n="btn_view_menu">Ver Carta Completa</span></a
+          >
+          <a href="reservas.html" class="btn-outline"
+            ><i class="fas fa-calendar-alt"></i>
+            <span data-i18n="btn_reserve">Reservar Mesa</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section id="historia" class="section container" data-aos="fade-up">
+      <div class="history">
+        <div class="history-image" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/cocineros.webp" alt="Nuestra Historia - El Retiro" />
+          <div class="history-badge">
+            <span>30+</span>
+            <p>Años de tradición familiar</p>
+          </div>
+        </div>
+        <div class="history-content" data-aos="fade-left" data-aos-delay="400">
+          <h4 data-i18n="history_date">Desde 1994</h4>
+          <h2 data-i18n="history_title">
+            Nuestra Historia: Raíces en Cada Bocado
+          </h2>
+          <p data-i18n="history_quote">
+            "En La Taberna del Retiro, la cocina no es solo comida, es el
+            lenguaje con el que mi abuelo nos decía cuánto nos quería."
+          </p>
+          <p data-i18n="history_p1">
+            Lo que comenzó como una pequeña casa de comidas fundada por la
+            familia García, se ha convertido en un referente de la gastronomía
+            madrileña. Mantenemos viva la esencia de las antiguas tabernas,
+            donde el producto de mercado y el tiempo lento en el fogón son los
+            protagonistas.
+          </p>
+          <p data-i18n="history_p2">
+            Cada Cocido Madrileño que servimos sigue la receta exacta que se
+            escribió hace tres décadas, respetando los tres vuelcos
+            tradicionales y el amor por lo nuestro.
+          </p>
+          <a
+            href="#"
+            style="color: var(--primary-color); font-weight: 600"
+            data-i18n="history_more"
+            >Conoce más sobre nosotros →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--section-bg-light)">
+      <div class="container">
+        <div class="dishes-header" data-aos="fade-right">
+          <div>
+            <h4
+              style="
+                color: var(--primary-color);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              "
+              data-i18n="dishes_subtitle"
+            >
+              Sugerencias del Chef
+            </h4>
+            <h2
+              class="serif"
+              style="font-size: 2.5rem; margin-top: 10px"
+              data-i18n="dishes_title"
+            >
+              Platos que definen Madrid
+            </h2>
+            <p
+              style="color: var(--muted-text); margin-top: 10px"
+              data-i18n="dishes_description"
+            >
+              Selección de nuestras especialidades más queridas, preparadas a
+              diario con ingredientes frescos del mercado.
+            </p>
+          </div>
+          <a
+            href="carta.html"
+            class="btn-primary"
+            style="
+              background-color: transparent;
+              color: var(--primary-color);
+              border: 1px solid var(--primary-color);
+            "
+            data-i18n="btn_view_menu"
+            >Ver Carta Completa</a
+          >
+        </div>
+
+        <div class="dishes-grid">
+          <div class="dish-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="dish-image">
+              <img
+                src="images/cocido-madrileno-receta.webp"
+                alt="Cocido Madrileño"
+              />
+              <span class="dish-price">24.00€</span>
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish1_title">Cocido Madrileño Completo</h3>
+              <p data-i18n="dish1_desc">
+                Servido en tres vuelcos tradicionales: sopas de fideos,
+                garbanzos con verduras y carnes selectas.
+              </p>
+              <div class="dish-meta">
+                <span
+                  ><i class="fas fa-star" style="color: gold"></i> 4.9 (120
+                  <span data-i18n="reviews">reseñas</span>)</span
+                >
+                <span data-i18n="specialty">Especialidad</span>
+              </div>
+            </div>
+          </div>
+          <div class="dish-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="dish-image">
+              <img
+                src="images/gambas-al-ajillo.webp"
+                alt="Gambas al Ajillo"
+              />
+              <span class="dish-price">16.50€</span>
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish2_title">Gambas al Ajillo "Abuela Rosa"</h3>
+              <p data-i18n="dish2_desc">
+                Gambas blancas frescas, ajos morados de Las Pedroñeras y aceite
+                de oliva virgen extra de Madrid.
+              </p>
+              <div class="dish-meta">
+                <span
+                  ><i class="fas fa-star" style="color: gold"></i> 4.8 (85
+                  <span data-i18n="reviews">reseñas</span>)</span
+                >
+                <span data-i18n="favorite">Favorito</span>
+              </div>
+            </div>
+          </div>
+          <div class="dish-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="dish-image">
+              <img
+                src="images/callos-a-la-madrilena.webp"
+                alt="Callos a la Madrileña"
+              />
+              <span class="dish-price">18.00€</span>
+            </div>
+            <div class="dish-info">
+              <h3 data-i18n="dish3_title">Callos a la Madrileña</h3>
+              <p data-i18n="dish3_desc">
+                Nuestra receta centenaria: melosos, con su toque de pimentón de
+                la Vera y chorizo de matanza.
+              </p>
+              <div class="dish-meta">
+                <span
+                  ><i class="fas fa-star" style="color: gold"></i> 4.7 (92
+                  <span data-i18n="reviews">reseñas</span>)</span
+                >
+                <span data-i18n="tradition">Tradición</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-teaser" data-aos="zoom-in">
+      <div class="container">
+        <h2 data-i18n="teaser_title">
+          ¿Desea disfrutar de una mesa frente al Retiro?
+        </h2>
+        <p data-i18n="teaser_desc">
+          Garantice su lugar en nuestra taberna y prepárese para una experiencia
+          gastronómica inolvidable.
+        </p>
+        <form class="teaser-form" action="reservas.html" method="GET">
+          <input type="date" name="date" aria-label="Fecha de reserva" required />
+          <select name="people" aria-label="Número de personas" required>
+            <option value="" disabled selected>Personas</option>
+            <option value="1">1 Persona</option>
+            <option value="2">2 Personas</option>
+            <option value="3">3 Personas</option>
+            <option value="4">4 Personas</option>
+            <option value="5">5+ Personas</option>
+          </select>
+          <button
+            type="submit"
+            class="btn-primary"
+            data-i18n="btn_reserve_now"
+          >
+            Reservar Ahora
+          </button>
+        </form>
+        <div style="margin-top: 20px; font-size: 0.9rem">
+          <span><i class="fas fa-phone"></i> +34 123 456 789</span>
+          <span style="margin-left: 20px"
+            ><i class="fas fa-clock"></i>
+            <span data-i18n="hours_summary"
+              >Lunes a Viernes 13:00 - 23:00</span
+            ></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="color: white; margin-bottom: 20px">
+            <i class="fas fa-utensils"></i>
+            <span data-i18n="footer_logo">LA TABERNA DEL RETIRO</span>
+          </div>
+          <p data-i18n="footer_desc">
+            Preservando el legado de la gastronomía madrileña en el rincón más
+            bello de la ciudad. Calidad, tradición y esmero.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer_hours_title">Horario de Apertura</h3>
+          <p><span data-i18n="mon_thu">Lunes - Jueves</span>: 12:30 - 00:00</p>
+          <p>
+            <span data-i18n="fri_sat">Viernes - Sábado</span>: 12:30 - 01:00
+          </p>
+          <p><span data-i18n="sun">Domingo</span>: 12:30 - 18:00</p>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer_location_title">Dónde Estamos</h3>
+          <p data-i18n="street">Calle de Alcalá, 123</p>
+          <p data-i18n="city">28009 Madrid, España</p>
+          <p><i class="fas fa-envelope"></i> hola@latabernadelretiro.com</p>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer_map_title">Mapa</h3>
+          <div
+            style="height: 120px; background: #333; border-radius: 5px"
+          ></div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          © 2026 La Taberna del Retiro.
+          <span data-i18n="all_rights">Todos los derechos reservados.</span> |
+          <a href="legal.html" data-i18n="legal">Aviso Legal</a> |
+          <a href="privacidad.html" data-i18n="privacy">Privacidad</a> |
+          <a href="admin.html" aria-label="Admin" rel="nofollow" style="text-decoration: none;"><i class="fas fa-lock" style="color: inherit; opacity: 0.5; font-size: 0.8rem;"></i></a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="container">
+        <div class="cookie-content">
+          <p data-i18n="cookie_text">
+            Utilizamos cookies para garantizar que brindamos la mejor
+            experiencia en nuestro sitio web. Al continuar navegando, acepta su
+            uso.
+          </p>
+        </div>
+        <div class="cookie-actions">
+          <button
+            id="accept-cookies"
+            class="btn-primary"
+            data-i18n="cookie_accept"
+          >
+            Aceptar
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Floating Contact Button -->
-    <a
-      href="https://wa.me/34000000000"
-      class="floating-whatsapp"
-      target="_blank"
-      rel="noopener"
-      aria-label="Contactar por WhatsApp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Header -->
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="index.html" class="logo-link" aria-label="Volver al inicio">
-            <img
-              src="images/favicon.svg"
-              alt="España Alrededor del Mundo Logo"
-              class="logo-image"
-            />
-            <div class="logo-text">
-              <span class="logo-main">SATW</span>
-              <span class="logo-sub">Spain Around The World</span>
-            </div>
-          </a>
-        </div>
-        <input
-          type="checkbox"
-          id="nav-toggle"
-          class="nav-toggle-input"
-          aria-hidden="true"
-        />
-        <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
-          <span class="hamburger"></span>
-        </label>
-        <ul id="primary-navigation" class="nav-links">
-          <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
-          <li>
-            <a href="experiencias.html" data-i18n="nav_exp">Experiencias</a>
-          </li>
-          <li><a href="blog.html" data-i18n="nav_blog">Inspiración</a></li>
-          <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
-          <li>
-            <div class="lang-selector">
-              <span class="current-lang"
-                >ES <i class="fa-solid fa-chevron-down"></i
-              ></span>
-              <ul class="lang-dropdown">
-                <li><a href="#" data-lang="es">Español</a></li>
-                <li><a href="#" data-lang="en">English</a></li>
-                <li><a href="#" data-lang="fr">Français</a></li>
-                <li><a href="#" data-lang="nl">Nederlands</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a
-              href="index.html#contacto"
-              class="nav-cta"
-              data-i18n="nav_contact"
-              >Contacto</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <main>
-      <section class="hero">
-        <img
-          src="images/paisaje españa.png"
-          alt="Imagen de España"
-          class="hero-image"
-        />
-        <div class="hero-content">
-          <h1 data-i18n="hero_h1">Descubre España y Compártela con el Mundo</h1>
-          <p data-i18n="hero_p">
-            SATW te conecta con los rincones más auténticos de España y los
-            lleva a cada esquina del planeta
-          </p>
-          <a href="#contacto" class="cta-button" data-i18n="cta_plan"
-            >Planifica tu Aventura</a
-          >
-        </div>
-      </section>
-
-      <!-- Destinos -->
-      <section id="destinos">
-        <h2 class="reveal" data-i18n="dest_title">Destinos Destacados</h2>
-        <div class="destinations-grid">
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img src="images/paisaje barcelona.png" alt="Barcelona" />
-            </div>
-            <div class="destination-info">
-              <h3>Barcelona</h3>
-              <p data-i18n="dest_bcn_p">
-                Arquitectura modernista, playas mediterráneas y una vida
-                nocturna vibrante te esperan en la Ciudad Condal.
-              </p>
-            </div>
-          </div>
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img src="images/paisaje madrid.png" alt="Madrid" />
-            </div>
-            <div class="destination-info">
-              <h3>Madrid</h3>
-              <p data-i18n="dest_mad_p">
-                La capital ofrece arte de clase mundial, gastronomía excepcional
-                y una energía incomparable.
-              </p>
-            </div>
-          </div>
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img src="images/paisaje sevilla.png" alt="Sevilla" />
-            </div>
-            <div class="destination-info">
-              <h3>Sevilla</h3>
-              <p data-i18n="dest_sev_p">
-                Sumérgete en el flamenco, la arquitectura mudéjar y la esencia
-                del sur español.
-              </p>
-            </div>
-          </div>
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img
-                src="images/paisaje islas baleares.png"
-                alt="Islas Baleares"
-              />
-            </div>
-            <div class="destination-info">
-              <h3>Islas Baleares</h3>
-              <p data-i18n="dest_bal_p">
-                Paraísos mediterráneos con calas cristalinas, cultura única y
-                ambiente cosmopolita.
-              </p>
-            </div>
-          </div>
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img
-                src="images/paisaje islas canarias.png"
-                alt="Islas Canarias"
-              />
-            </div>
-            <div class="destination-info">
-              <h3>Islas Canarias</h3>
-              <p data-i18n="dest_can_p">
-                Paisajes volcánicos, playas de ensueño y clima primaveral
-                durante todo el año.
-              </p>
-            </div>
-          </div>
-          <div class="destination-card reveal">
-            <div class="destination-image">
-              <img src="images/paisaje san sebastian.png" alt="San Sebastián" />
-            </div>
-            <div class="destination-info">
-              <h3>San Sebastián</h3>
-              <p data-i18n="dest_ss_p">
-                Capital gastronómica con playas urbanas espectaculares y cultura
-                vasca auténtica.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Servicios -->
-      <section id="servicios" class="services">
-        <div class="section-header reveal">
-          <h2 data-i18n="serv_title">Nuestros Servicios</h2>
-          <p class="section-subtitle" data-i18n="serv_subtitle">
-            Exclusividad, confort y experiencias diseñadas exclusivamente para
-            ti en cada rincón de España.
-          </p>
-        </div>
-        <div class="services-grid">
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-map-location-dot"></i>
-            </div>
-            <h3 data-i18n="serv_custom_h">Viajes a Medida</h3>
-            <p data-i18n="serv_custom_p">
-              Creamos itinerarios artesanales que reflejan tus sueños, desde
-              retiros boutique hasta aventuras gastronómicas privadas.
-            </p>
-          </div>
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-            <h3 data-i18n="serv_local_h">Embajadores Locales</h3>
-            <p data-i18n="serv_local_p">
-              Más que guías, tendrás anfitriones expertos que te abrirán las
-              puertas a los secretos mejor guardados de nuestra cultura.
-            </p>
-          </div>
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-gem"></i>
-            </div>
-            <h3 data-i18n="serv_exec_h">Garantía de Excelencia</h3>
-            <p data-i18n="serv_exec_p">
-              Acceso a tarifas preferenciales y beneficios exclusivos en los
-              mejores hoteles y establecimientos de la península.
-            </p>
-          </div>
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <i class="fa-solid fa-headset"></i>
-            </div>
-            <h3 data-i18n="serv_supp_h">Asistencia Ejecutiva 24/7</h3>
-            <p data-i18n="serv_supp_p">
-              Tu tranquilidad es nuestra prioridad. Nuestro equipo de soporte
-              premium te acompaña en cada paso de tu viaje.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonios -->
-      <section id="testimonios">
-        <h2 class="reveal" data-i18n="test_title">
-          Lo Que Dicen Nuestros Clientes
-        </h2>
-        <div class="testimonials-container">
-          <div class="testimonial reveal">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text" data-i18n="test_1_text">
-              Una experiencia inolvidable en Barcelona. El itinerario fue
-              perfecto y pudimos conocer lugares que jamás habríamos descubierto
-              por nuestra cuenta.
-            </p>
-            <p class="testimonial-author" data-i18n="test_1_author">
-              - María González
-            </p>
-          </div>
-          <div class="testimonial reveal">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text" data-i18n="test_2_text">
-              El equipo de Viajes Horizonte hizo que nuestras vacaciones en las
-              Canarias fueran mágicas. Atención impecable y detalles que
-              marcaron la diferencia.
-            </p>
-            <p class="testimonial-author" data-i18n="test_2_author">
-              - Carlos Ramírez
-            </p>
-          </div>
-          <div class="testimonial reveal">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text" data-i18n="test_3_text">
-              Profesionales, atentos y conocedores. Nos ayudaron a planificar
-              una ruta por Andalucía que superó todas nuestras expectativas.
-            </p>
-            <p class="testimonial-author" data-i18n="test_3_author">
-              - Laura Martín
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section id="faq" class="faq-section reveal">
-        <div class="section-header">
-          <h2 data-i18n="faq_title">Preguntas Frecuentes</h2>
-          <p class="section-subtitle" data-i18n="faq_subtitle">
-            Resolvemos tus dudas para que solo te preocupes de disfrutar de tu
-            viaje.
-          </p>
-        </div>
-        <div class="faq-container">
-          <div class="faq-item">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              data-i18n="faq_q1"
-            >
-              ¿Qué incluyen los viajes a medida?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p data-i18n="faq_a1">
-                Nuestros viajes incluyen itinerarios 100% personalizados,
-                selección de hoteles boutique, transporte privado, guías locales
-                exclusivos y asistencia 24/7 durante toda tu estancia.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              data-i18n="faq_q2"
-            >
-              ¿Con cuánta antelación debo reservar?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p data-i18n="faq_a2">
-                Recomendamos un mínimo de 2 a 3 meses para garantizar la
-                disponibilidad en los destinos más exclusivos, aunque podemos
-                gestionar peticiones de última hora según disponibilidad.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              data-i18n="faq_q3"
-            >
-              ¿Ofrecéis servicios para grupos o empresas?
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p data-i18n="faq_a3">
-                Sí, diseñamos experiencias MICE, viajes de incentivo y retiros
-                corporativos, así como viajes para grandes grupos familiares con
-                logística dedicada.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Newsletter Section -->
-      <section id="newsletter" class="newsletter-section reveal">
-        <div class="newsletter-content">
-          <h2 data-i18n="news_h2">Suscríbete a nuestra Newsletter</h2>
-          <p data-i18n="news_p">
-            Recibe itinerarios exclusivos y secretos de viaje directamente en tu
-            bandeja de entrada.
-          </p>
-          <form class="newsletter-form">
-            <input
-              type="email"
-              placeholder="Tu correo electrónico"
-              required
-              aria-label="Correo electrónico para newsletter"
-              data-i18n="news_placeholder"
-            />
-            <button type="submit" class="cta-button" data-i18n="news_btn">
-              Suscribirme
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <!-- Formulario de Contacto -->
-      <section id="contacto">
-        <h2 class="reveal" data-i18n="contact_h2">
-          Planifica Tu Próxima Aventura
-        </h2>
-        <form class="contact-form reveal">
-          <div class="form-group">
-            <label for="nombre" data-i18n="form_name">Nombre Completo</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              required
-              data-i18n="form_name_placeholder"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email" data-i18n="form_email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              data-i18n="form_email_placeholder"
-            />
-          </div>
-          <div class="form-group">
-            <label for="destino" data-i18n="form_destination"
-              >Destino de Interés</label
-            >
-            <select id="destino" name="destino">
-              <option value="" data-i18n="form_opt_default">
-                Selecciona un destino
-              </option>
-              <option value="barcelona">Barcelona</option>
-              <option value="madrid">Madrid</option>
-              <option value="sevilla">Sevilla</option>
-              <option value="baleares">Islas Baleares</option>
-              <option value="canarias">Islas Canarias</option>
-              <option value="san-sebastian">San Sebastián</option>
-              <option value="otro" data-i18n="form_opt_other">
-                Otro destino
-              </option>
-            </select>
-          </div>
-          <div class="form-group small-inputs-grid">
-            <div>
-              <label for="adultos" data-i18n="form_adults">Adultos</label>
-              <input
-                type="number"
-                id="adultos"
-                name="adultos"
-                min="0"
-                value="2"
-              />
-            </div>
-            <div>
-              <label for="ninos" data-i18n="form_children">Niños</label>
-              <input type="number" id="ninos" name="ninos" min="0" value="0" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="total-personas" data-i18n="form_total"
-              >Total de Personas</label
-            >
-            <input
-              type="number"
-              id="total-personas"
-              name="total-personas"
-              readonly
-              value="2"
-            />
-          </div>
-          <div class="form-group date-grid">
-            <div>
-              <label for="fecha-inicio" data-i18n="form_start"
-                >Fecha de inicio</label
-              >
-              <input type="date" id="fecha-inicio" name="fecha-inicio" />
-            </div>
-            <div>
-              <label for="fecha-fin" data-i18n="form_end">Fecha de fin</label>
-              <input type="date" id="fecha-fin" name="fecha-fin" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="mensaje" data-i18n="form_message"
-              >Cuéntanos sobre tu viaje ideal</label
-            >
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              data-i18n="form_message_placeholder"
-            ></textarea>
-          </div>
-          <div class="form-group privacy-checkbox">
-            <input type="checkbox" id="privacy-consent" name="privacy-consent" required style="width: auto; height: auto; display: inline-block;">
-            <label for="privacy-consent" style="display: inline-block; font-weight: 500;" data-i18n="form_privacy_consent">Acepto la política de privacidad</label>
-          </div>
-          <button type="submit" class="submit-button" data-i18n="form_btn">
-            Solicitar Información
-          </button>
-        </form>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img
-            src="images/favicon.svg"
-            alt=""
-            class="logo-image"
-            aria-hidden="true"
-          />
-          <h3 data-i18n="footer_h3">SATW - Spain Around The World</h3>
-        </div>
-        <p data-i18n="footer_tagline">
-          Llevando la esencia de España a cada rincón del mundo
-        </p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-        <div class="footer-contact">
-          <p><i class="fa-solid fa-envelope"></i> fake@satw.travel</p>
-          <p><i class="fa-solid fa-phone"></i> +34 000 00 00 00</p>
-        </div>
-        <p class="copyright" data-i18n="footer_copy">
-          © 2026 SATW - Spain Around The World. Todos los derechos reservados.
-        </p>
-        <div class="footer-legal-links">
-          <a href="aviso-legal.html" data-i18n="legal_notice">Aviso Legal</a>
-          <a href="politica-privacidad.html" data-i18n="privacy_policy">Política de Privacidad</a>
-          <a href="politica-cookies.html" data-i18n="cookies_policy">Política de Cookies</a>
-          <a href="condiciones-contratacion.html" data-i18n="terms_conditions">Condiciones de Contratación</a>
-        </div>
-      </div>
-    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - La Taberna del Retiro</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            color: var(--text-color);
+        }
+        .admin-table th, .admin-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .admin-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        .admin-table tr:last-child td {
+            border-bottom: none;
+        }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .status-pending { 
+            background: var(--tag-bg); 
+            color: var(--primary-color); 
+        }
+        .btn-delete {
+            background: #FF4757;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #noReservations {
+            background: var(--card-bg) !important;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils text-primary"></i>
+                <span>PANEL DE CONTROL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ver Web</a></li>
+
+                <li><a href="#" onclick="clearReservations()" class="nav-clear-btn">Limpiar Todo</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="section container admin-main-padding">
+        <h1 class="serif">Gestión de Reservas</h1>
+        <p>Aquí puedes visualizar todas las reservas guardadas en el sistema.</p>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Cliente</th>
+                    <th>Personas</th>
+                    <th>Teléfono</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="adminReservationsBody">
+                <!-- Se llenará con Javascript -->
+            </tbody>
+        </table>
+        
+        <div id="noReservations" class="no-reservations-box" style="display:none;">
+            <i class="fas fa-calendar-times empty-icon"></i>
+            <p>No hay reservas registradas por el momento.</p>
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Capa de seguridad básica (ofuscada para mayor privacidad)
+        const ADMIN_TOKEN = "c29sb3lvMjYt"; // Contraseña codificada (Base64)
+        
+        function checkAccess() {
+            const accessKey = sessionStorage.getItem('admin_access');
+            if (accessKey !== ADMIN_TOKEN) {
+                const pass = prompt("Introduzca la clave de administrador:");
+                // Encriptación simple local para no exponer la contraseña real
+                if (pass && btoa(pass) === ADMIN_TOKEN) {
+                    sessionStorage.setItem('admin_access', ADMIN_TOKEN);
+                    loadReservations();
+                } else {
+                    alert("Acceso denegado");
+                    window.location.href = "index.html";
+                }
+            } else {
+                loadReservations();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Apply saved theme
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                const themeBtn = document.getElementById('theme-toggle');
+                if (themeBtn) themeBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
+            
+            checkAccess();
+        });
+
+        async function loadReservations() {
+            const container = document.getElementById('adminReservationsBody');
+            const placeholder = document.getElementById('noReservations');
+            
+            // Check if Firebase is enabled in script.js (logic simplified here)
+            // Note: In script.js we defined USE_FIREBASE. 
+            // For simplicity, we check if global 'db' exists and is initialized.
+            
+            let reservations = [];
+            
+            // Re-detect initialization from script.js context (if script.js defines it globally)
+            // For now, let's keep the dual logic:
+            if (typeof firebase !== 'undefined' && firebase.apps.length > 0) {
+                const db = firebase.firestore();
+                const snapshot = await db.collection('reservations').orderBy('date', 'asc').get();
+                snapshot.forEach(doc => {
+                    reservations.push({ id: doc.id, ...doc.data() });
+                });
+            } else {
+                reservations = JSON.parse(localStorage.getItem('taberna_reservations') || '[]');
+                reservations.sort((a, b) => new Date(a.date) - new Date(b.date));
+            }
+
+            if (reservations.length === 0) {
+                container.parentElement.style.display = 'none';
+                placeholder.style.display = 'block';
+                return;
+            }
+
+            container.innerHTML = '';
+            placeholder.style.display = 'none';
+            container.parentElement.style.display = 'table';
+
+            reservations.forEach(res => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${res.date}</td>
+                    <td>${res.time}</td>
+                    <td><strong>${res.name}</strong></td>
+                    <td>${res.people}</td>
+                    <td>${res.phone}</td>
+                    <td><span class="status-badge status-pending">Pendiente</span></td>
+                    <td><button class="btn-delete" aria-label="Eliminar reserva" onclick="deleteReservation('${res.id}')"><i class="fas fa-trash"></i></button></td>
+                `;
+                container.appendChild(tr);
+            });
+        }
+
+        async function deleteReservation(id) {
+            if (confirm('¿Estás seguro de eliminar esta reserva?')) {
+                if (typeof firebase !== 'undefined' && firebase.apps.length > 0) {
+                    const db = firebase.firestore();
+                    await db.collection('reservations').doc(id).delete();
+                } else {
+                    let reservations = JSON.parse(localStorage.getItem('taberna_reservations') || '[]');
+                    reservations = reservations.filter(r => r.id !== id && r.id.toString() !== id);
+                    localStorage.setItem('taberna_reservations', JSON.stringify(reservations));
+                }
+                loadReservations();
+            }
+        }
+
+        function clearReservations() {
+            if (confirm('¿BORRAR TODAS las reservas? Esta acción solo afectará a LocalStorage en este modo.')) {
+                localStorage.removeItem('taberna_reservations');
+                loadReservations();
+            }
+        }
+    </script>
+</body>
+</html>

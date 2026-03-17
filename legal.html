@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="legal_title">Aviso Legal | La Taberna del Retiro</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>LA TABERNA DEL RETIRO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="index.html#historia" data-i18n="nav_history">Historia</a></li>
+                <li><a href="carta.html" data-i18n="nav_menu">Carta</a></li>
+                <li><a href="reservas.html" data-i18n="nav_contact">Contacto</a></li>
+                <li><a href="reservas.html" class="btn-primary" data-i18n="nav_reserve">Reservar Mesa</a></li>
+
+                <li>
+                  <button id="lang-toggle" class="lang-switch">
+                    <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+                  </button>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 30vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 data-i18n="legal_hero_title">Aviso Legal</h1>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 80px 20px; max-width: 800px; margin: 0 auto;">
+        <div data-aos="fade-up">
+            <h2 class="serif" data-i18n="legal_sec1_title">1. Información General</h2>
+            <p data-i18n="legal_sec1_text">En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se detallan los datos del titular del sitio web...</p>
+            
+            <h2 class="serif" style="margin-top: 40px;" data-i18n="legal_sec2_title">2. Propiedad Intelectual</h2>
+            <p data-i18n="legal_sec2_text">El diseño del portal y sus códigos fuente, así como los logos, marcas y demás signos distintivos que aparecen en el mismo pertenecen a La Taberna del Retiro y están protegidos por los correspondientes derechos de propiedad intelectual e industrial.</p>
+            
+            <h2 class="serif" style="margin-top: 40px;" data-i18n="legal_sec3_title">3. Responsabilidad</h2>
+            <p data-i18n="legal_sec3_text">La Taberna del Retiro no se hace responsable de la legalidad de otros sitios web de terceros desde los que pueda accederse al portal. Tampoco responde por la legalidad de otros sitios web de terceros, que pudieran estar vinculados desde este portal.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #eee;">
+            <div class="logo">
+                <i class="fas fa-utensils" style="color: var(--primary-color);"></i> <span data-i18n="footer_logo">LA TABERNA DEL RETIRO</span>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div style="text-align: right; font-size: 0.8rem;">
+                <strong data-i18n="footer_hours_title">Horario de Apertura</strong><br>
+                <span data-i18n="mon_sun">Lun - Dom</span>: 13:00 - 00:00
+            </div>
+        </div>
+        <div class="container footer-bottom" style="justify-content: center; border-top: none; padding-top: 20px;">
+            <p>© 2026 La Taberna del Retiro. <span data-i18n="all_rights">Todos los derechos reservados.</span> | <a href="admin.html" aria-label="Admin" rel="nofollow" style="text-decoration: none;"><i class="fas fa-lock" style="color: inherit; opacity: 0.5; font-size: 0.8rem;"></i></a></p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container">
+            <div class="cookie-content">
+                <p data-i18n="cookie_text">Utilizamos cookies para garantizar que brindamos la mejor experiencia en nuestro sitio web. Al continuar navegando, acepta su uso.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="btn-primary" data-i18n="cookie_accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

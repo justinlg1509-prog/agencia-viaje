@@ -1,0 +1,60 @@
+
+/* Reservation Page Form Styles */
+.reservation-form-title {
+  margin-bottom: 10px;
+}
+
+.reservation-form-desc {
+  color: var(--muted-text);
+  margin-bottom: 30px;
+}
+
+.reservation-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.reservation-submit-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.reservation-success-msg {
+  color: green;
+  margin-top: 15px;
+  text-align: center;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Contact Info Card Styles */
+.contact-info-card-alt {
+  background: #FFF9F7;
+  border: 1px solid #FFEBE6;
+}
+
+.contact-card-title {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.contact-card-desc {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .reservation-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-link-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-color);
+  font-size: 0.8rem;
+  padding: 8px 15px;
+}

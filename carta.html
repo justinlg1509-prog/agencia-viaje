@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Carta | Sabores Tradicionales - La Taberna del Retiro</title>
+    <meta name="description" content="Explora nuestra carta: desde el auténtico cocido madrileño hasta las mejores croquetas de jamón ibérico. Calidad premium frente al Retiro.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="https://wa.me/34912345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils" style="color: var(--primary-color);"></i>
+                <span>LA TABERNA DEL RETIRO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="index.html#historia" data-i18n="nav_history">Historia</a></li>
+                <li><a href="carta.html" style="color: var(--primary-color);" data-i18n="nav_menu">Carta</a></li>
+                <li><a href="reservas.html" data-i18n="nav_contact">Contacto</a></li>
+                <li><a href="reservas.html" class="btn-primary" data-i18n="nav_reserve">Reservar Mesa</a></li>
+
+                <li>
+                  <button id="lang-toggle" class="lang-switch">
+                    <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+                  </button>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 data-i18n="menu_hero_title">Nuestra Carta</h1>
+            <p data-i18n="menu_hero_desc">Sabor tradicional madrileño con el mejor producto de temporada.</p>
+        </div>
+    </header>
+
+    <main class="section container">
+        
+        <!-- Entrantes -->
+        <div class="menu-category" data-aos="fade-up">
+            <div class="menu-category-header">
+                <i class="fas fa-cheese"></i>
+                <h2 class="serif" data-i18n="cat_starters">Entrantes y Tapas</h2>
+            </div>
+            <div class="menu-items-grid">
+                <div class="menu-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item1_name">Tortilla de Patata de la Abuela <span class="tag-badge" data-i18n="tag_signature">Firma</span></h4>
+                        <p data-i18n="item1_desc">Nuestra receta legendaria con huevos camperos, patata agria y cebolla caramelizada a fuego lento.</p>
+                    </div>
+                    <span class="menu-item-price">12,50€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item2_name">Croquetas de Jamón Ibérico</h4>
+                        <p data-i18n="item2_desc">Bechamel cremosa infusionada con hueso de jamón y tropezones de bellota (6 uds).</p>
+                    </div>
+                    <span class="menu-item-price">14,00€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item3_name">Bravas Crujientes Retiro</h4>
+                        <p data-i18n="item3_desc">Corte en dados, doble cocción y nuestra salsa brava secreta ligeramente picante.</p>
+                    </div>
+                    <span class="menu-item-price">9,50€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item4_name">Ensaladilla Rusa con Ventresca</h4>
+                        <p data-i18n="item4_desc">Patata nueva, mayonesa suave y ventresca de atún de primera calidad.</p>
+                    </div>
+                    <span class="menu-item-price">13,00€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carnes -->
+        <div class="menu-category" data-aos="fade-up">
+            <div class="menu-category-header">
+                <i class="fas fa-drumstick-bite"></i>
+                <h2 class="serif" data-i18n="cat_meats">Carnes y Guisos</h2>
+            </div>
+            <div class="menu-items-grid">
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item5_name">Callos a la Madrileña <span class="tag-badge" data-i18n="tag_signature">Firma</span></h4>
+                        <p data-i18n="item5_desc">Receta centenaria con mucho mimo, chorizo asturiano, morcilla y su toque de guindilla.</p>
+                    </div>
+                    <span class="menu-item-price">18,00€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item6_name">Chuletón de Vaca Vieja</h4>
+                        <p data-i18n="item6_desc">45 días de maduración dry-aged, servido con pimientos del cristal y patatas fritas.</p>
+                    </div>
+                    <span class="menu-item-price">58,00€/kg</span>
+                </div>
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item7_name">Rabo de Toro Estofado</h4>
+                        <p data-i18n="item7_desc">Cocinando lentamente en vino tinto de Madrid hasta que la carne se deshace.</p>
+                    </div>
+                    <span class="menu-item-price">22,00€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pescados -->
+        <div class="menu-category" data-aos="fade-up">
+            <div class="menu-category-header">
+                <i class="fas fa-fish"></i>
+                <h2 class="serif" data-i18n="cat_fish">Pescados del Día</h2>
+            </div>
+            <div class="menu-items-grid">
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item8_name">Bacalao al Pil-Pil</h4>
+                        <p data-i18n="item8_desc">Lomos de bacalao Skrei con emulsión de AOVE y ajos dorados.</p>
+                    </div>
+                    <span class="menu-item-price">21,00€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item9_name">Merluza de Pincho a la Bilbaína</h4>
+                        <p data-i18n="item9_desc">Directa de la lonja, preparada con refrito de ajos, guindilla y vinagre de sidra.</p>
+                    </div>
+                    <span class="menu-item-price">24,50€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Postres -->
+        <div class="menu-category" data-aos="fade-up">
+            <div class="menu-category-header">
+                <i class="fas fa-ice-cream"></i>
+                <h2 class="serif" data-i18n="cat_desserts">Postres Caseros</h2>
+            </div>
+            <div class="menu-items-grid">
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item10_name">Torrija Caramelizada</h4>
+                        <p data-i18n="item10_desc">Empapada en leche y nata, terminada con costra de azúcar quemada y helado de vainilla.</p>
+                    </div>
+                    <span class="menu-item-price">7,50€</span>
+                </div>
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item-info">
+                        <h4 data-i18n="item11_name">Tarta de Queso Fluida</h4>
+                        <p data-i18n="item11_desc">Elaborada con una mezcla de quesos madrileños, horneada diariamente.</p>
+                    </div>
+                    <span class="menu-item-price">8,00€</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="reservation-teaser" style="background-color: #f4f1ea; color: var(--text-color);">
+        <div class="container">
+            <div class="reservation-form-container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 class="serif" data-i18n="menu_teaser_title">¿Le preparamos una mesa?</h2>
+                <p data-i18n="menu_teaser_desc">Disfrute de la mejor gastronomía tradicional frente al Parque del Retiro. Recomendamos reservar con antelación.</p>
+                <a href="reservas.html" class="btn-primary" style="display: inline-block; margin-top: 20px;" data-i18n="btn_reserve_now">Reserve su mesa ahora</a>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;"><i class="fas fa-phone"></i> +34 912 345 678</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>
+                © 2026 La Taberna del Retiro. 
+                <span data-i18n="footer_rights_prices">Todos los derechos reservados. Precios con IVA incluido.</span> | 
+                <a href="legal.html" data-i18n="legal">Aviso Legal</a> | 
+                <a href="privacidad.html" data-i18n="privacy">Privacidad</a> |
+                <a href="admin.html" aria-label="Admin" rel="nofollow" style="text-decoration: none;"><i class="fas fa-lock" style="color: inherit; opacity: 0.5; font-size: 0.8rem;"></i></a>
+            </p>
+            <div style="display: flex; gap: 20px;">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container">
+            <div class="cookie-content">
+                <p data-i18n="cookie_text">Utilizamos cookies para garantizar que brindamos la mejor experiencia en nuestro sitio web. Al continuar navegando, acepta su uso.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="btn-primary" data-i18n="cookie_accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

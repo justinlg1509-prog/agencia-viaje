@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas y Contacto | La Taberna del Retiro</title>
+    <meta name="description" content="Reserva tu mesa online en La Taberna del Retiro. Atención personalizada para grupos y eventos frente al Parque del Retiro.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="https://wa.me/34912345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils" style="color: var(--primary-color);"></i>
+                <span>LA TABERNA DEL RETIRO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="index.html#historia" data-i18n="nav_history">Historia</a></li>
+                <li><a href="carta.html" data-i18n="nav_menu">Carta</a></li>
+                <li><a href="reservas.html" style="color: var(--primary-color);" data-i18n="nav_contact">Contacto</a></li>
+                <li><a href="reservas.html" class="btn-primary" data-i18n="nav_reserve">Reservar Mesa</a></li>
+
+                <li>
+                  <button id="lang-toggle" class="lang-switch">
+                    <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+                  </button>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 data-i18n="res_hero_title">Contacto y Reservas</h1>
+            <p data-i18n="res_hero_desc">Vive una experiencia gastronómica inolvidable frente al pulmón de Madrid.</p>
+        </div>
+    </header>
+
+    <main class="section container">
+        <div class="contact-container">
+            
+            <div class="reservation-form-container" data-aos="fade-right">
+                <h2 class="serif reservation-form-title" data-i18n="res_form_title">Reserva tu Mesa</h2>
+                <p class="reservation-form-desc" data-i18n="res_form_desc">Completa el formulario y te confirmaremos tu reserva en breve.</p>
+                
+                <form id="reservationForm">
+                    <div class="reservation-form-grid">
+                        <div class="form-group">
+                            <label for="res_date"><i class="fas fa-calendar-day"></i> <span data-i18n="label_date">Fecha</span></label>
+                            <input type="date" id="res_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res_time"><i class="fas fa-clock"></i> <span data-i18n="label_hour">Hora</span></label>
+                            <select id="res_time" required>
+                                <option value="" disabled selected data-i18n="opt_select_hour">Selecciona una hora</option>
+                                <option>13:00</option>
+                                <option>13:30</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>20:30</option>
+                                <option>21:00</option>
+                                <option>21:30</option>
+                                <option>22:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="res_people"><i class="fas fa-users"></i> <span data-i18n="label_people">Comensales</span></label>
+                        <select id="res_people" required>
+                            <option value="1">1 <span data-i18n="person_singular">Persona</span></option>
+                            <option value="2" selected>2 <span data-i18n="person_plural">Personas</span></option>
+                            <option value="3">3 <span data-i18n="person_plural">Personas</span></option>
+                            <option value="4">4 <span data-i18n="person_plural">Personas</span></option>
+                            <option value="5">5 <span data-i18n="person_plural">Personas</span></option>
+                            <option value="6">6 <span data-i18n="person_plural">Personas</span></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="res_name"><i class="fas fa-user"></i> <span data-i18n="label_name">Nombre completo</span></label>
+                        <input type="text" id="res_name" placeholder="Tu nombre" data-i18n-placeholder="ph_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="res_phone"><i class="fas fa-phone"></i> <span data-i18n="label_phone">Teléfono</span></label>
+                        <input type="tel" id="res_phone" placeholder="+34 600 000 000" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary reservation-submit-btn" data-i18n="btn_confirm_res">Confirmar Reserva</button>
+                    <div id="successMessage" class="reservation-success-msg" data-i18n="res_success">
+                        ¡Reserva enviada con éxito! Te contactaremos pronto.
+                    </div>
+                </form>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="contact-info-card contact-info-card-alt">
+                    <h3 class="serif contact-card-title" data-i18n="contact_card_title">¡Te estamos esperando!</h3>
+                    <p class="contact-card-desc" data-i18n="contact_card_desc">"Estamos deseando recibirte y compartir contigo lo mejor de nuestra cocina tradicional con toques modernos, justo frente al emblemático Parque del Retiro."</p>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong data-i18n="address">DIRECCIÓN</strong><br>
+                            <span data-i18n="street">Calle de Alcalá, 123</span><br>
+                            <span data-i18n="city">28009 Madrid, España</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <strong data-i18n="phone">TELÉFONO</strong><br>
+                            +34 912 345 678
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong data-i18n="email">EMAIL</strong><br>
+                            hola@latabernadelretiro.com
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+                        <div>
+                            <strong data-i18n="follow_us">SÍGUENOS</strong><br>
+                            <a href="#">Instagram</a>  |  <a href="#">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-primary map-link-btn">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="btn_view_maps">Ver en Google Maps</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Grupo grande section -->
+        <section style="background-color: var(--primary-color); color: var(--white); border-radius: 10px; padding: 50px; text-align: center; margin-top: 50px;" data-aos="zoom-in">
+            <h2 class="serif" data-i18n="large_group_title">¿Vienes con un grupo grande?</h2>
+            <p style="max-width: 700px; margin: 20px auto 30px; opacity: 0.9;" data-i18n="large_group_desc">Para celebraciones, eventos de empresa o grupos de más de 6 personas, contáctanos directamente para ofrecerte un menú personalizado.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="tel:+34912345678" class="btn-primary" style="background: white; color: var(--primary-color);" data-i18n="btn_call_now">Llamar Ahora</a>
+                <a href="mailto:hola@latabernadelretiro.com" class="btn-outline" data-i18n="btn_send_email">Enviar Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid #eee;">
+            <div class="logo">
+                <i class="fas fa-utensils" style="color: var(--primary-color);"></i> <span data-i18n="footer_logo">LA TABERNA DEL RETIRO</span>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Nuestra web"><i class="fab fa-globe"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <div style="text-align: right; font-size: 0.8rem;">
+                <strong data-i18n="footer_hours_title">Horario de Apertura</strong><br>
+                <span data-i18n="mon_sun">Lun - Dom</span>: 13:00 - 00:00
+            </div>
+        </div>
+        <div class="container footer-bottom" style="justify-content: center; border-top: none;">
+            <p>
+                © 2026 La Taberna del Retiro. 
+                <span data-i18n="all_rights">Todos los derechos reservados.</span> | 
+                <a href="legal.html" data-i18n="legal">Aviso Legal</a> | 
+                <a href="privacidad.html" data-i18n="privacy">Privacidad</a> |
+                <a href="admin.html" aria-label="Admin" rel="nofollow" style="text-decoration: none;"><i class="fas fa-lock" style="color: inherit; opacity: 0.5; font-size: 0.8rem;"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container">
+            <div class="cookie-content">
+                <p data-i18n="cookie_text">Utilizamos cookies para garantizar que brindamos la mejor experiencia en nuestro sitio web. Al continuar navegando, acepta su uso.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="btn-primary" data-i18n="cookie_accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (Optional but ready) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
